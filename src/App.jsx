@@ -1,10 +1,23 @@
-import React from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './Components/Home'
+import Signin from './Components/Signin'
+import Signup from './Components/Signup'
+import About from './Components/About'
+import Profile from './Components/Profile'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-center text-red-700'>REAL ESTATE</h1>
-    </div>
+    <>
+   <BrowserRouter>
+   <Routes>
+ <Route path="/" element={<Home/>}/>
+ <Route path="/signin" element={<Signin/>}/>
+ <Route path="/signup" element={<Signup/>}/>
+ <Route path="/about" element={<About/>}/>
+ <Route path="/profile" element={<Profile/>}/>
+   </Routes>
+   </BrowserRouter>
+   </>
   )
 }
 
